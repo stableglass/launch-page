@@ -450,9 +450,9 @@ h1 {
         border-radius: 15px;
     }
 
-    footer {
+    .footer-content {
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
         text-align: center;
     }
 }
