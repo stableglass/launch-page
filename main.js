@@ -17,6 +17,46 @@ document.addEventListener('DOMContentLoaded', () => {
     const emailInput = document.getElementById('email');
     const messageDisplay = document.getElementById('form-message');
 
+    // Analytics helper
+    function trackEvent(name) {
+        if (window.sa_event) {
+            window.sa_event(name);
+        }
+    }
+
+    // Input focus tracking
+    emailInput.addEventListener('focus', () => {
+        trackEvent('waitlist_input_focus');
+    }, { once: true });
+
+    // Social link tracking
+    document.getElementById('twitter-link')?.addEventListener('click', () => {
+        trackEvent('twitter_click');
+    });
+
+    document.getElementById('discord-link')?.addEventListener('click', () => {
+        trackEvent('discord_click');
+    });
+
+    // Buy button tracking
+    document.getElementById('buy-button')?.addEventListener('click', () => {
+        trackEvent('buy_sgt_click');
+    });
+
+    // Scroll depth tracking (Footer)
+    if ('IntersectionObserver' in window) {
+        const footer = document.querySelector('footer');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    trackEvent('scrolled_to_footer');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        if (footer) observer.observe(footer);
+    }
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
@@ -26,6 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
             showMessage('Please enter a valid email address.', 'error');
             return;
         }
+
+        // Track submission INTENT
+        trackEvent('waitlist_submit_attempt');
 
         if (!supabase) {
             showMessage('Supabase configuration missing.', 'error');
@@ -72,11 +115,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (error) throw error;
 
             console.log(`Success! Email joined: ${email}`);
+            trackEvent('waitlist_success');
             showMessage("You're on the list! We'll be in touch soon.", 'success');
             form.reset();
 
         } catch (error) {
             console.error('Error saving to Supabase:', error.message);
+            trackEvent('waitlist_error');
             if (error.code === '23505') {
                 showMessage("This email is already on the list!", 'error');
             } else {
