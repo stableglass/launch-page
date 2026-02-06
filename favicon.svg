@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50.651165mm"
+   height="50.651165mm"
+   viewBox="0 0 50.651165 50.651165"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.3 (fcd0343856, 2026-01-01)"
+   sodipodi:docname="favicon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.3790404"
+     inkscape:cx="140.31496"
+     inkscape:cy="84.116462"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="356"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-87.690735,-139.25656)">
+    <rect
+       style="fill:#00cc00;stroke-width:0.312208;stroke-linecap:square;stroke-linejoin:round;paint-order:stroke fill markers"
+       id="rect1"
+       width="50.651165"
+       height="50.651165"
+       x="87.690735"
+       y="139.25656" />
+    <g
+       id="g2"
+       transform="matrix(26.626178,0,0,26.626178,-2134.1585,-2322.2475)">
+      <path
+         style="fill:#000000;stroke-width:13.2292;stroke-linecap:square;stroke-linejoin:round;paint-order:stroke fill markers"
+         d="m 84.40208,93.133335 c 0,0 0,-0.264584 0,-0.264584 h -0.79375 v 0.79375 h 0.529166 v 0.264584 h 0.264584 v -0.529167 h -0.529167 v -0.264583 z"
+         id="path1" />
+      <path
+         style="fill:#000000;stroke-width:13.2292;stroke-linecap:square;stroke-linejoin:round;paint-order:stroke fill markers"
+         d="m 84.392314,93.662503 c 0,0 0,0.264584 0,0.264584 h 0.79375 v -0.79375 h -0.529166 v -0.264584 h -0.264584 v 0.529167 h 0.529167 v 0.264583 z"
+         id="path2" />
+    </g>
+  </g>
+</svg>
