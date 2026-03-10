@@ -343,6 +343,16 @@ footer {
     width: 100%;
 }
 
+.hero-disclaimer {
+    color: #333333;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: -2.25rem auto 3.5rem;
+    font-weight: 500;
+    opacity: 1;
+}
+
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -409,6 +419,11 @@ h1 {
 
 .subtitle {
     animation: fadeIn 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+}
+
+.hero-disclaimer {
+    animation: fadeIn 0.8s ease-out 0.3s forwards;
     opacity: 0;
 }
 
