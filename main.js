@@ -38,40 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
         trackEvent('discord_click');
     });
 
-    // Buy button modal logic
-    const buyButton = document.getElementById('buy-button');
-    const buyModal = document.getElementById('buy-modal');
-    const modalClose = document.getElementById('modal-close');
-    const modalCancel = document.getElementById('modal-cancel');
-    const modalContinue = document.getElementById('modal-continue');
-
-    const openModal = (e) => {
-        if (e) e.preventDefault();
-        buyModal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent scrolling
-        trackEvent('buy_sgt_click');
-    };
-
-    const closeModal = () => {
-        buyModal.classList.remove('active');
-        document.body.style.overflow = ''; // Re-enable scrolling
-    };
-
-    buyButton?.addEventListener('click', openModal);
-    modalClose?.addEventListener('click', closeModal);
-    modalCancel?.addEventListener('click', closeModal);
-
-    // Close on backdrop click
-    buyModal?.addEventListener('click', (e) => {
-        if (e.target === buyModal) closeModal();
-    });
-
-    modalContinue?.addEventListener('click', () => {
-        trackEvent('buy_sgt_confirm_continue');
-        window.open('https://clanker.world/clanker/0xb9d78Dd92dd9bE44a5F7edAF40C980A62bf24b07', '_blank');
-        closeModal();
-    });
-
     // Scroll depth tracking (Footer)
     if ('IntersectionObserver' in window) {
         const footer = document.querySelector('footer');
